@@ -9,6 +9,17 @@ export const FlightList = styled.ul`
 	grid-gap: 10px;
 	${containerMixin};
 
+	&.dark {		
+		li {
+			background: ${(props) => props.theme.black};
+			border: 1px solid ${(props) => props.theme.white};
+
+			a {
+				color: ${(props) => props.theme.white};
+			}
+		}
+	}
+
 	li {
 		position: relative;
 		display: flex;
