@@ -52,3 +52,26 @@ useEffect(
   [api]
 )
 ```
+
+<br>
+
+---
+
+## `useReducer`
+
+```js
+const [state, dispatch] = useReducer(themeReducer, initialState)
+
+export const themeReducer = (state, action) => {
+  switch (action.type) {
+    case CHANGE_MODE:
+      return {
+        theme: !state.theme
+      }
+    default:
+      return state
+  }
+}
+```
+
+<br>
