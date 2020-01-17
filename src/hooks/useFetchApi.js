@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 
 export const useFetchApi = (api) => {
-	const [ data, setData ] = useState([])
-	const [ loading, setLoading ] = useState(false)
+	const [data, setData] = useState([])
+	const [loading, setLoading] = useState(false)
 
 	useEffect(
 		() => {
@@ -19,7 +19,7 @@ export const useFetchApi = (api) => {
 
 			fetchApi()
 		},
-		[ api ]
+		[api]
 	)
 
 	return {

@@ -4,23 +4,21 @@ import { Link } from 'react-router-dom'
 import { useFetchApi } from 'hooks/useFetchApi'
 // Services
 import { SPACEX_API } from 'services/lib'
+// Components
+import { Loading } from 'components/loading'
 // Utils
 import { getUniqueValues } from 'utils/flightData'
 // Styles
 import { FlightList } from 'styles/flights'
 
-export const Flights = ({ message }) => {
+export const Home = () => {
 	const { data, loading } = useFetchApi(SPACEX_API)
 	const flights = data.map(({ launch_year }) => launch_year)
-
-	console.log(flights)
 
 	return (
 		<div>
 			<FlightList>
-				{loading ? (
-					'Loading...'
-				) : (
+				{loading ? <Loading /> : (
 					getUniqueValues(flights).map((year, i) => (
 						<li key={i}>
 							<Link to={`/launch/${year}`}>{year}</Link>
