@@ -6,9 +6,9 @@ This is a project to try and use all React hooks in one project.
 
 ## Todos: 
 
-- [ ] - `useState`
-- [ ] - `useEffect`
-- [ ] - `useContext`
+- [x] - `useState`
+- [x] - `useEffect`
+- [x] - `useContext`
 - [ ] - `useReducer`
 - [ ] - `useCallback`
 - [ ] - `useMemo`
@@ -16,3 +16,39 @@ This is a project to try and use all React hooks in one project.
 - [ ] - `useImperativeHandle`
 - [ ] - `useLayoutEffect`
 - [ ] - `useDebugValue`
+
+<br>
+
+---
+
+## `useState`
+
+```js
+const [data, setData] = useState([])
+```
+
+<br>
+
+---
+
+## `useEffect`
+
+```js
+useEffect(
+  () => {
+    const fetchApi = async () => {
+      setLoading(true)
+      try {
+        const response = await fetch(api).then((res) => res.json())
+        setData(response)
+        setLoading(false)
+      } catch (error) {
+        console.log(`Uh oh: ${error}`)
+      }
+    }
+
+    fetchApi()
+  },
+  [api]
+)
+```
