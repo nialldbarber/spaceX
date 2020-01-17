@@ -5,8 +5,4 @@ import { containerMixin } from 'styles/utils/mixins'
 export const Container = styled.div`
 	display: block;
 	${containerMixin};
-
-	h1 {
-		margin: 0;
-	}
 `

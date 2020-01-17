@@ -20,7 +20,7 @@ export const Home = () => {
 
 	return (
 		<div>
-			<FlightList className={theme === 'dark' ? 'dark' : ''}>
+			<FlightList className={theme === true ? 'dark' : ''}>
 				{loading ? <Loading /> : (
 					getUniqueValues(flights).map((year, i) => (
 						<li key={i}>
