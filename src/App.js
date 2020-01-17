@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 // Pages
-import { Flights } from 'pages/flights'
+import { Home } from 'pages/home'
 import { Launch } from 'pages/launch'
 // Components
 import { Nav } from 'components/nav'
@@ -17,7 +17,7 @@ export const App = () => (
 			<Nav />
 			<main>
 				<Switch>
-					<Route exact path="/" component={Flights} />
+					<Route exact path="/" component={Home} />
 					<Route path="/launch/:id" component={Launch} />
 				</Switch>
 			</main>
