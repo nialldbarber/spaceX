@@ -1,11 +1,11 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 // Pages
-import { Flights } from 'pages/flights'
+import { Home } from 'pages/home'
 
 test('shows message when checkbox is checked', () => {
-	const testMessage = 'Test message'
-	render(<Flights>{testMessage}</Flights>)
+  const testMessage = 'Test message'
+  render(<Home>{testMessage}</Home>)
 
-	expect(screen.queryByText(testMessage)).toBeNull()
+  expect(screen.queryByText(testMessage)).toBeNull()
 })

@@ -13,7 +13,16 @@ export const WrapperContext = createContext(initialState)
 export const WrapperProvider = (props) => {
   const [state, dispatch] = useReducer(themeReducer, initialState)
 
-  const changeTheme = () => dispatch({ type: CHANGE_MODE })
+  const changeTheme = () => {
+    if (!state.theme) {
+      localStorage.setItem('name', 'niall')
+    } else {
+      localStorage.setItem('name', 'dana')
+    }
+    dispatch({ type: CHANGE_MODE })
+  }
 
-  return <WrapperContext.Provider value={{ theme: state.theme, changeTheme }} {...props} />
+  const user = localStorage.getItem('name')
+
+  return <WrapperContext.Provider value={{ theme: state.theme, changeTheme, user }} {...props} />
 }

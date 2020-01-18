@@ -13,18 +13,18 @@ import { theme } from 'styles/utils/variables'
 import { GlobalStyle } from 'styles/base'
 
 export const App = () => (
-	<WrapperProvider>
-		<ThemeProvider theme={theme}>
-			<GlobalStyle />
-			<Router>
-				<Nav />
-				<main>
-					<Switch>
-						<Route exact path="/" component={Home} />
-						<Route path="/launch/:id" component={Launch} />
-					</Switch>
-				</main>
-			</Router>
-		</ThemeProvider>
-	</WrapperProvider>
+  <WrapperProvider>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Router>
+        <Nav />
+        <main>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/launch/:id" component={Launch} />
+          </Switch>
+        </main>
+      </Router>
+    </ThemeProvider>
+  </WrapperProvider>
 )

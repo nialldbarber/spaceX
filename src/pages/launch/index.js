@@ -20,7 +20,7 @@ export const Launch = ({ match }) => {
 	return (
 		<Container>
 			<h1>Launches from {year}</h1>
-			<Grid container spacing={2}>
+			<Grid className="launches" container spacing={2}>
 				{loading ? <Loading /> : (
 					data.map(({ flight_number, mission_name, launch_success }) => (
 						<Card key={flight_number}>

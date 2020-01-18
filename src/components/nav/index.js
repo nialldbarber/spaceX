@@ -9,13 +9,16 @@ import { Header } from 'styles/nav'
 import logo from 'assets/spacex.png'
 
 export const Nav = () => {
-	const { changeTheme } = useContext(WrapperContext)
+	const { user, changeTheme } = useContext(WrapperContext)
+
+	console.log(user)
 
 	return (
 		<Header>
 			<Link to="/">
 				<img src={logo} alt="Logo" />
 			</Link>
+			<h1 style={{ color: 'white' }}>Hello {user}!</h1>
 			<Button variant="contained" onClick={changeTheme}>Change Theme</Button>
 		</Header>
 	)
