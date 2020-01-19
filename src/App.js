@@ -6,6 +6,7 @@ import { WrapperProvider } from 'state/context'
 // Pages
 import { Home } from 'pages/home'
 import { Launch } from 'pages/launch'
+import { TestPage } from 'pages/employees'
 // Components
 import { Nav } from 'components/nav'
 // Styles
@@ -22,6 +23,7 @@ export const App = () => (
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/launch/:id" component={Launch} />
+            <Route path="/test-page" component={TestPage} />
           </Switch>
         </main>
       </Router>

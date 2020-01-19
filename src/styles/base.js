@@ -1,6 +1,13 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
+  @font-face {
+    @font-face {
+      font-family: 'NewPatagonia';
+      src: url('../fonts/NewPatagonia-Normal.otf');
+    }
+  }
+
   * {
     box-sizing: inherit;
     text-rendering: optimizeLegibility;

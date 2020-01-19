@@ -24,7 +24,7 @@ export const Launch = ({ match }) => {
 				{loading ? <Loading /> : (
 					data.map(({ flight_number, mission_name, launch_success }) => (
 						<Card key={flight_number}>
-							<CardContent>
+							<CardContent className={getFlightStatus(launch_success)}>
 								<p>
 									Mission: {mission_name} - {getFlightStatus(launch_success)}
 								</p>
